@@ -25,14 +25,14 @@ import plotly.express as px
 # This figure shows the genders and ages of passengers, and whether they're alive or not
 fig = px.scatter(df, x="age", y="sex", color="alive", size="age")
 fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
-fig.show()
+# fig.show()
 
 #Create the layout and start the app
 app.layout = html.Div(children=[
     html.H1(children='First Dash using Titanic Data'),
 
     html.Div(children='''
-        Dash: A web application framework for your data.
+        This chart shows the gender, age of passengers as well as whether they survived or not.
     '''),
 
     dcc.Graph(
